@@ -17,7 +17,7 @@
 	} 
 	else if ($flag=="Edit") {	
 		$worker_id=mysqli_real_escape_string($conn,$_POST['worker_id']);			
-		$query="UPDATE t_worker SET worker_ic_no=$worker_ic_no, worker_name=$worker_name, worker_dob=$worker_dob, worker_email=$worker_email, worker_email=$worker_email, worker_address=$worker_address, worker_salary=$worker_salary WHERE worker_id=$worker_id";
+		$query="UPDATE t_worker SET worker_ic_no='$worker_ic_no', worker_name='$worker_name', worker_dob='$worker_dob', worker_email='$worker_email', worker_email='$worker_email', worker_address='$worker_address', worker_salary=$worker_salary WHERE worker_id=$worker_id";
 	} elseif ($flag=="Delete") {
 		$worker_id=mysqli_real_escape_string($conn,$_POST['worker_id']);			
 		$query="DELETE FROM t_worker WHERE worker_id=$worker_id";
@@ -28,5 +28,5 @@
 	if ($data) 
 		echo 'Success';
 	else 
-	    echo 'Failed';
+	   echo 'Failed';
 ?>

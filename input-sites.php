@@ -1,5 +1,32 @@
-<?php session_start(); if (! isset($_SESSION[ 'role'])) { header( "Location: index.php"); } include 'config.php'; include 'header.php'; $flag="Create" ; $site_id='' ; //$sub_dept='FO' ; $site_name='' ; $site_address='' ; $site_lat=0.000000; $site_lng=0.000000; if (isset($_GET[ 'site_id'])) { $site_id=mysqli_real_escape_string($conn,$_GET[ 'site_id']); $query="SELECT site_id,site_name,site_address,site_lat,site_lng FROM t_site WHERE site_id=$site_id" ; $result=mysqli_query($conn,$query); $data=mysqli_fetch_assoc($result); $site_id=$data[ 'site_id']; $site_name=$data[ 'site_name']; $site_address=$data[ 'site_address']; $site_lat=$data[ 'site_lat']; $site_lng=$data[ 'site_lng']; $flag="Edit" ; } ?>
-
+<?php
+ session_start(); 
+if (! isset($_SESSION['role'])) {
+  header("Location: index.php");
+}
+	include 'config.php';
+	include 'header.php';
+	$flag="Create";
+	$sub_dept='FO';
+	$site_id='';
+	$site_name='';
+	$site_address='';
+	$site_lat=0.000000;
+	$site_lng=0.000000;
+	
+	if (isset($_GET['site_id'])) {
+		$site_id=mysqli_real_escape_string($conn,$_GET['site_id']);
+		$query="SELECT site_id,site_name,site_address,site_lat,site_lng,sub_dept FROM t_site WHERE site_id=$site_id";
+		$result=mysqli_query($conn,$query);
+		$data=mysqli_fetch_assoc($result);
+		$sub_dept=$data['sub_dept'];
+		$site_id=$data['site_id'];
+		$site_name=$data['site_name'];
+		$site_address=$data['site_address'];
+		$site_lat=$data['site_lat'];
+		$site_lng=$data['site_lng'];
+		$flag="Edit";
+	}
+?>
 <!-- BEGIN PAGE CONTAINER-->
 <div class="page-content">
     <?php include 'menu.php'; ?>
@@ -101,9 +128,9 @@
         function onGeoError(event) {
             alert("Error code " + event.code + ". " + event.message);
         };
-        $(".auto").autoNumeric('init', {
-            mDec: '6'
-        });
+        //$(".auto").autoNumeric('init', {
+          //  mDec: '6'
+        //});
         $(".input-append.date").datepicker({
             autoclose: true,
             todayHighlight: true,

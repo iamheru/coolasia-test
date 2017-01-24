@@ -14,7 +14,7 @@
 	} 
 	else if ($flag=="Edit") {	
 		$site_id=mysqli_real_escape_string($conn,$_POST['site_id']);			
-		$query="UPDATE t_site SET site_name=$site_name, site_address=$site_address, site_lat=$site_lat, site_lng=$site_lng WHERE site_id=$site_id";
+		$query="UPDATE t_site SET site_name='$site_name', site_address='$site_address', site_lat=$site_lat, site_lng=$site_lng WHERE site_id=$site_id";
 	} elseif ($flag=="Delete") {
 		$site_id=mysqli_real_escape_string($conn,$_POST['site_id']);			
 		$query="DELETE FROM t_site WHERE site_id=$site_id";
