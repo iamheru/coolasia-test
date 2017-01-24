@@ -20,6 +20,7 @@
 <!-- END CSS TEMPLATE -->
 </head>
 <!-- END HEAD -->
+
 <!-- BEGIN BODY -->
 <body class="error-body no-top">
 <div class="container">
@@ -74,6 +75,7 @@
 		?>
   </div>
 <!-- END CONTAINER -->
+
 <!-- BEGIN CORE JS FRAMEWORK-->
 <script src="assets/plugins/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -86,6 +88,7 @@ $(document).ready(function () {
 });
 </script>
 <!-- BEGIN CORE TEMPLATE JS -->
+
 <!-- END CORE TEMPLATE JS -->
 </body>
 </html>
