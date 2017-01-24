@@ -27,7 +27,7 @@
 
                                     <div class="input-append success date col-md-11 col-lg-11 col-xs-10 no-padding">
                                         <label class="form-label semi-bold">Date of Birth</label>
-                                        <input name="worker_dob" id="worker_dob" type="text" class="form-control" value="<?php echo $worker_dob ?>" readonly="readonly">
+                                        <input name="worker_dob" id="worker_dob" type="text" class="form-control" value="<?php echo $worker_dob ?>">
                                         <span class="add-on"><span class="arrow"></span><i class="fa fa-th"></i>
                                         </span>
                                     </div>
