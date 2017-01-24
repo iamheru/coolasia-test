@@ -65,9 +65,7 @@
 <script src="assets/js/datatable.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        var table = $('#example,#example2').DataTable({
-            stateSave: true,
-            stateDuration: -1,
+        var table = $('#example').DataTable({
             "sDom": "<'row'<'col-md-6'l<'toolbar'>><'col-md-6'f>r>t<'row'<'col-md-12'p i>>",
             "oLanguage": {
                 "sLengthMenu": "_MENU_ ",
@@ -80,8 +78,6 @@
         $(".select2-wrapper").select2({
             minimumResultsForSearch: -1
         });
-
     });
-
 </script>
 <?php include 'footer.php' ?>
